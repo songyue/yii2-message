@@ -1,6 +1,6 @@
 <?php
 
-namespace thyseus\message\models;
+namespace songyue\message\models;
 
 use Yii;
 
@@ -18,7 +18,8 @@ class IgnoreListEntry extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%message_ignorelist}}';
+        $tablePrefix = Yii::$app->getModule('message')->tablePrefix;
+        return '{{%'.$tablePrefix.'message_ignorelist}}';
     }
 
     /**

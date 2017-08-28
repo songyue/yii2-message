@@ -1,6 +1,6 @@
 <?php
 
-namespace thyseus\message\jobs;
+namespace songyue\message\jobs;
 
 use yii\base\Object;
 use yii\queue\Job;
@@ -8,7 +8,7 @@ use yii\queue\Job;
 /**
  * Class EmailJob
  * This EmailJob is being pushed to the yii2-queue in case 'useMailQueue' is set to true in the module configuration.
- * @package thyseus\message\jobs
+ * @package songyue\message\jobs
  */
 class EmailJob extends Object implements Job
 {

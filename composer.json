@@ -1,7 +1,7 @@
 {
     "name": "songyue/yii2-message",
     "description": "Message system for Yii2",
-    "keywords": ["yii2", "yii2-user", "message"],
+    "keywords": ["yii2", "yii2-user", "message", "私信", "站内消息"],
     "type": "yii2-extension",
     "license": "GPLv3",
     "support": {

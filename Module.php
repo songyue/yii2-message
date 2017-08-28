@@ -4,10 +4,10 @@
  *
  * @property array $modelMap
  *
- * @author Herbert Maschke <thyseus@gmail.com>
+  * @author Yue Song <songyue118s@gmail.com>
  */
 
-namespace thyseus\message;
+namespace songyue\message;
 
 use yii;
 use yii\base\Module as BaseModule;
@@ -15,7 +15,13 @@ use yii\i18n\PhpMessageSource;
 
 class Module extends BaseModule
 {
-    const VERSION = '0.3.0-dev';
+    const VERSION = '0.1.0-dev';
+
+    // 自定义表前缀
+    public $tablePrefix = '';
+
+    // 邮箱模板
+    public $mailTemplate = 'message';
 
     public $defaultRoute = 'message/message/inbox';
 
@@ -39,9 +45,9 @@ class Module extends BaseModule
 
     /**
      * @var string A string that should be prefixed to the title when answering an message.
-     * Defaults to 'Re: ' and can be adjusted for foreign languages, for example 'Aw: ' in german.
+     * Defaults to '回复: ' and can be adjusted for foreign languages, for example 'Aw: ' in german.
      */
-    public $answerPrefix = 'Re: ';
+    public $answerPrefix = '回复: ';
 
     /**
      * @var string Callback that defines which users are not possible to write messages to.

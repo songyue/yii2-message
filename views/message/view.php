@@ -1,6 +1,6 @@
 <?php
 
-use thyseus\message\models\Message;
+use songyue\message\models\Message;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */

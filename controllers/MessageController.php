@@ -1,12 +1,12 @@
 <?php
 
-namespace thyseus\message\controllers;
+namespace songyue\message\controllers;
 
 use app\models\User;
-use thyseus\message\models\AllowedContacts;
-use thyseus\message\models\IgnoreListEntry;
-use thyseus\message\models\Message;
-use thyseus\message\models\MessageSearch;
+use songyue\message\models\AllowedContacts;
+use songyue\message\models\IgnoreListEntry;
+use songyue\message\models\Message;
+use songyue\message\models\MessageSearch;
 use Yii;
 use yii\db\IntegrityException;
 use yii\filters\AccessControl;

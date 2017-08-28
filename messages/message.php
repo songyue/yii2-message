@@ -4,7 +4,7 @@ return [
     'sourcePath' => __DIR__ . '/../',
     'messagePath' => __DIR__,
     'languages' => [
-        'de',
+        'zh-CN',
     ],
     'translator' => 'Yii::t',
     'sort' => false,

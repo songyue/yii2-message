@@ -16,8 +16,8 @@ I suggest to use https://github.com/dektrium/yii2-user which works wonderful wit
 ## Installation
 
 ```bash
-$ composer require thyseus/yii2-message
-$ php yii migrate/up --migrationPath=@vendor/thyseus/yii2-message/migrations
+$ composer require songyue/yii2-message
+$ php yii migrate/up --migrationPath=@vendor/songyue/yii2-message/migrations
 ```
 
 ## Configuration
@@ -27,7 +27,7 @@ Add following lines to your main configuration file:
 ```php
 'modules' => [
     'message' => [
-        'class' => 'thyseus\message\Module',
+        'class' => 'songyue\message\Module',
         'userModelClass' => '\app\models\User', // your User model. Needs to be ActiveRecord.
     ],
 ],

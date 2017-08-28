@@ -1,3 +1,9 @@
+0.1.0 forked from thyseus/yii2-message
+增加中文支持
+增加自定义表前缀支持
+增加自定义邮件模板支持
+更新命名空间名称为当前分支名称
+
 0.4.0 - to be released
 ENH: Allow to send messages without sender (messages coming from "the system")
 ENH: Allow to use yii2-queue (https://github.com/yiisoft/yii2-queue)

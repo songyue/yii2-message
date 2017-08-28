@@ -1,12 +1,11 @@
 <?php
 use kartik\select2\Select2;
-use thyseus\message\models\Message;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\MessageSearch */
+/* @var $searchModel songyue\message\models\MessageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('message', 'Ignorelist');

@@ -5,10 +5,10 @@
  *
  */
 
-namespace thyseus\message\models;
+namespace songyue\message\models;
 
-use thyseus\message\jobs\EmailJob;
-use thyseus\message\validators\IgnoreListValidator;
+use songyue\message\jobs\EmailJob;
+use songyue\message\validators\IgnoreListValidator;
 use yii;
 use yii\behaviors\AttributeBehavior;
 use yii\behaviors\TimestampBehavior;
@@ -27,7 +27,8 @@ class Message extends ActiveRecord
 
     public static function tableName()
     {
-        return '{{%message}}';
+        $tablePrefix = Yii::$app->getModule('message')->tablePrefix;
+        return '{{%'.$tablePrefix.'message}}';
     }
 
     public static function compose($from, $to, $title, $message = '', $context = null)
@@ -103,7 +104,9 @@ class Message extends ActiveRecord
                 'targetClass' => Yii::$app->getModule('message')->userModelClass,
                 'targetAttribute' => 'id',
                 'message' => Yii::t('message', 'Recipient has not been found'),
-            ]
+            ],
+            // 程序控制默认值
+            ['status', 'default', 'value'=>self::STATUS_UNREAD],
         ];
     }
 
@@ -161,8 +164,9 @@ class Message extends ActiveRecord
 
         $this->trigger(Message::EVENT_BEFORE_MAIL);
 
-        if (!file_exists($mailer->viewPath)) {
-            $mailer->viewPath = '@vendor/thyseus/yii2-message/mail/';
+        // fix:
+        if (!file_exists($mailer->viewPath.'/'. Yii::$app->getModule('message')->mailTemplate)) {
+            $mailer->viewPath = '@vendor/songyue/yii2-message/mail/';
         }
 
         $mailing = $mailer->compose(['html' => 'message', 'text' => 'text/message'], [
