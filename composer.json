@@ -1,19 +1,19 @@
 {
-    "name": "thyseus/yii2-message",
+    "name": "songyue/yii2-message",
     "description": "Message system for Yii2",
     "keywords": ["yii2", "yii2-user", "message"],
     "type": "yii2-extension",
     "license": "GPLv3",
     "support": {
-        "issues": "https://github.com/thyseus/yii2-message/issues?state=open",
-        "forum": "https://gitter.im/thyseus/yii2-message",
-        "source": "https://github.com/thyseus/yii2-message"
+        "issues": "https://github.com/songyue/yii2-message/issues?state=open",
+        "forum": "https://gitter.im/songyue/yii2-message",
+        "source": "https://github.com/songyue/yii2-message"
     },
     "authors": [
         {
-            "name": "Herbert Maschke",
-            "email": "thyseus@gmail.com",
-            "homepage": "https://github.com/thyseus/yii2-message"
+            "name": "Yue Song",
+            "email": "songyue@gmail.com",
+            "homepage": "https://github.com/songyue/yii2-message"
         }
     ],
     "minimum-stability": "dev",
@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "thyseus\\message\\": ""
+            "songyue\\message\\": ""
         }
     }
 }
