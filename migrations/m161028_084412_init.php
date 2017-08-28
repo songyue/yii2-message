@@ -23,7 +23,7 @@ class m161028_084412_init extends Migration
             'status'               => Schema::TYPE_INTEGER. ' NOT NULL DEFAULT 0',
             'title'                => Schema::TYPE_STRING . '(255) NOT NULL',
             'message'              => Schema::TYPE_TEXT,
-//            'context'              => Schema::TYPE_STRING . '(255) NOT NULL',
+            'context'              => Schema::TYPE_STRING . '(255) NOT NULL',
             'created_at'           => Schema::TYPE_DATETIME . ' NOT NULL',
         ], $tableOptions);
 

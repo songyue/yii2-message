@@ -15,7 +15,7 @@ use yii\i18n\PhpMessageSource;
 
 class Module extends BaseModule
 {
-    const VERSION = '0.1.0-dev';
+    const VERSION = '0.4.1';
 
     // 自定义表前缀
     public $tablePrefix = '';
